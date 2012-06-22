@@ -1,0 +1,60 @@
+tina:
+	Time Navigator (tina) is a backup solution by Atempo. This is my (http://twitter.com/askang) cheatsheet on tina.
+		
+	daemon 				: tina_daemon
+	default TCP port	: 2525
+	default UDP port	: 2525
+
+	Commands
+	========
+	source ./.tina.sh	: set up environment variables before any command
+	tina_daemon			: start tina daemon
+	tina_stop			: stop tina daemon
+	tina_catalog_ctrl	: check/start/stop catalog status. Require running tina_daemon
+	
+	GUI
+	===
+	tina_adm 			: Launch Admin console
+	tina_user_info 		: Launches agent job viewer
+	tina_event			: launches event viewer
+	tina_job			: launches job manager
+	tina_library		: launches library manager
+	tina_operator		: launches media request console
+	tina_scm 			: launches security and compliance manager
+	tina_sched			: launches task viewer
+	
+	Backup
+	======
+	tina_backup			: start a customized backup (For options -help)
+	tina_start_backup	: start a setup strategy backup
+	tina_cart			: list or restore directory from cartridge
+	tina_init			: catalog maintainance
+	tina_odbsave		: save catalog to local file
+	
+	Maintainance
+	============
+	tina_user_info		: Launch tina agent job viewer
+	tina_alarm			: sent alarm to tina server
+	tina_acct			: generate report
+	
+	 
+	Library Diagnostic
+	==================
+	qcdiag				: commmand line tool for library diagnostic
+	(qcdiag) help		: list all command option
+
+	Troubleshooting
+	===============
+
+	tina_dmin not starting up
+	-------------------------
+	1. Check port process atempo and lmgrd (licence manager) are running
+	
+		ps -A | grep atempo
+		ps -A | grep lmgrd
+
+	2. Check licence file contents
+	
+		cat /Applications/Atempo/FlexLM/atempo.lic
+	
+	2. Check port 25000 is not blocked between licence manager and atempo server(if seperate)
