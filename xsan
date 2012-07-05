@@ -1,0 +1,55 @@
+xsan:
+
+XSAN is a Storage Area Network solution by Apple.
+-------------------------------------------------------------------------
+Version 0.3	- 2012-06-27 - Arvinder Singh (http://twitter.com/askang)
+Version 0.2	- 2012-06-27 - Arvinder Singh (http://twitter.com/askang)
+Version 0.1	- 2012-06-27 - Arvinder Singh (http://twitter.com/askang)
+-------------------------------------------------------------------------
+
+xsanctl command [arg [...]]
+===========================
+help 			: Display a list of the available xsanctl commands
+ping 			: `ping' xsand. Used to verify that xsand is responsive.
+mount volumeName 	: Mounts the volume volumeName.  Then auto-mount at startup.
+unmount volumeName 	: Unmounts the volume volumeName.
+list 			: Lists the volumes available on the SAN and mounted path.
+sanConfigChanged 	: Notify Xsan that SAN conf changed and should be reloaded.
+roleChanged 		: Notify Xsan that role of this computer has changed/removed.
+disksChanged 		: Notify Xsan that disks have changed and should be rescanned.
+
+Configuration files (/Library/Filesystems/Xsan/config)
+======================================================
+volume.cfg		: Volume settings
+volume-auxdata.plist	: Additional volume settings used by Xsan Admin
+fsmlist			: Volume autostart list
+fsnameservers		: Controller list
+automount.plist		: Xsan volumes auto mounts and their mount options
+config.plist		: Private Xsan Admin configuration information
+notification.plist	: Notification settings made with Xsan Admin
+notes/		: Note files whose contents were entered in Admin Inspector window
+uuid			: Private Xsan Admin computer identification information
+license.dat		: File to place StorNext licenses if add StorNext clients
+.auth_secret		: Shared secret file used when adding StorNext clients to your SAN
+
+Management
+==========
+cvmkdir 	: Create an Xsan Directory with an Affinity
+snfsdefrag	: move files to new storage pool after changing an affinity
+cvfail	: sends out email notification configured in XSAN Admin
+
+cvadmin 	: View or change volume and storage pool settings
+cvaffinity 	: Manipulate affinity tags manually 
+cvcp 		: Copy files or folders 
+cvfsck 	: Check or repair a volume 
+cvlabel 	: View, label, and initialize LUNs
+cvmkdir 	: Create a folder and assign an affinity
+cvmkfile 	: Create and preallocate a file
+cvmkfs 	: Initialize a volume
+cvupdatefs 	: Apply volume setup changes
+snfsdefrag 	: Defragment a volume
+xsanctl 	: Mount and unmount Xsan volumes
+Glossery
+========
+fsmpm		: File System Manager port mapper daemon. Both on server and client.
+fsm			: File System Manager daemon. Server daemon manages XSAN volume.

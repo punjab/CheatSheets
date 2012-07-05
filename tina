@@ -1,5 +1,8 @@
 tina:
-	Time Navigator (tina) is a backup solution by Atempo. This is my (http://twitter.com/askang) cheatsheet on tina.
+Time Navigator (tina) is a tape backup solution by Atempo. 
+-------------------------------------------------------------------------
+Version 0.1	- 2012-06-27 - Arvinder Singh (http://twitter.com/askang)
+-------------------------------------------------------------------------
 		
 	daemon 				: tina_daemon
 	default TCP port	: 2525
