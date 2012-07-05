@@ -2,7 +2,7 @@
 
 My [cheat sheets](http://http://cheat.errtheblog.com/) for quick reference on command line.
 
-## Contributed cheat sheets
+### Contributed cheat sheets
 + tina : [Time Navigator](http://www.atempo.com/products/timenavigator/default.asp) (tina) is a tape backup solution by Atempo. 
 + xsan : [XSAN](http://www.apple.com/xsan/) is a Storage Area Network solution by Apple.
 
